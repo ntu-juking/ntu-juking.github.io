@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Xiaolin Ju"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Associate Professor of Nantong University"
   location         : "Seyuan Road No.9, Nantong City"
   employer         : "Nantong University"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "@jxioln14"
   vine             :
   weibo            :
   xing             :
