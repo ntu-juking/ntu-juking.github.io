@@ -80,10 +80,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Xiaolin Ju"
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
-  location         : "Seyuan Road No.09 , Nantong City, Jiangsu Province, China"
+  location         : "Seyuan Road No.09 , /n Nantong City, /n Jiangsu Province, /n China"
   employer         : "Nantong University"
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=Gu_RmPQAAAAJ&hl=en"
