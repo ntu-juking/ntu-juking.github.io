@@ -10,4 +10,6 @@ citation: 'Qian, Jie, Xiaolin Ju, and Xiang Chen. "GNet4FL: effective fault loca
 
 [Download paper here](http://ntu-juking.github.io/files/ASE2023.pdf)
 
+[Source code](https://github.com/humorrr/GNet4FL)
+
 [Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=GNet4FL%3A+effective+fault+localization+via+graph+convolutional+neural+network&btnG=)
