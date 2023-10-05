@@ -1,5 +1,5 @@
 ---
-title: "HSFal: Effective Fault Localization using Hybrid Spectrum of Full Slices and Execution Slices"
+title: "[JSS2014] HSFal: Effective Fault Localization using Hybrid Spectrum of Full Slices and Execution Slices"
 collection: publications
 permalink: /publication/2014-03-01-paper-HSFal-number-1
 date: 2014-03-01
