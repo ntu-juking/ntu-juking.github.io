@@ -1,5 +1,5 @@
 ---
-title: "GNet4FL: Effective fault localization via graph convolutional neural network"
+title: "（ASE2023）GNet4FL: Effective fault localization via graph convolutional neural network"
 collection: publications
 permalink: /publication/2023-03-01-paper-GNet4FL
 date: 2023-03-01
