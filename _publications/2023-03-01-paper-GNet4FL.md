@@ -3,9 +3,9 @@ title: "[ASE2023] GNet4FL: Effective fault localization via graph convolutional 
 collection: publications
 permalink: /publication/2023-03-01-paper-GNet4FL
 date: 2023-03-01
-venue: 'Automated Software Engineering'
+venue: 'Automated Software Engineering. 30, (2)'
 paperurl: 'http://ntu-juking.github.io/files/ASE2023.pdf'
-citation: 'Qian, Jie, Xiaolin Ju, and Xiang Chen. "GNet4FL: Effective fault localization via graph convolutional neural network." Automated Software Engineering, 30, (2) (2023): 1--16.'
+citation: 'Qian, Jie, Xiaolin Ju, and Xiang Chen. "GNet4FL: Effective fault localization via graph convolutional neural network." Automated Software Engineering, 30, (2) 2023: 1--16.'
 ---
 
 [Download paper here](http://ntu-juking.github.io/files/ASE2023.pdf)
