@@ -1,5 +1,5 @@
 ---
-title: "COMPSAC2023 == EDP-BGCNN: Effective Defect Prediction via BERT-based Graph Convolutional Neural Network"
+title: "[COMPSAC2023] EDP-BGCNN: Effective Defect Prediction via BERT-based Graph Convolutional Neural Network"
 collection: publications
 permalink: /publication/2023-COMPSAC
 date: 2023-03-01
