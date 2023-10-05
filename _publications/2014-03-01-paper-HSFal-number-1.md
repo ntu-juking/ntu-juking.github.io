@@ -3,7 +3,7 @@ title: "[JSS2014] HSFal: Effective Fault Localization using Hybrid Spectrum of F
 collection: publications
 permalink: /publication/2014-03-01-paper-HSFal-number-1
 date: 2014-03-01
-venue: 'Journal of Systems and Software'
+venue: 'Journal of Systems and Software (JSS)'
 paperurl: 'http://ntu-juking.github.io/files/JSS2013.pdf'
 citation: 'Ju, Xiaolin, Shujuan Jiang, Xiang Chen, Xingya Wang, Yanmei Zhang, and Heling Cao. "HSFal: Effective fault localization using hybrid spectrum of full slices and execution slices." Journal of Systems and Software 90 (2014): 3-17.'
 ---
