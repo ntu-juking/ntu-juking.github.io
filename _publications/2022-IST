@@ -1,0 +1,15 @@
+---
+title: “[IST2023] Can test input selection methods for deep neural network guarantee test diversity? A large-scale empirical study"
+collection: publications
+permalink: /publication/2022-IST
+date: 2022-08-01
+venue: 'Information and Software Technology (IST)'
+paperurl: 'http://ntu-juking.github.io/files/IST2022.pdf'
+citation: 'Zhao, Chunyu and Mu, Yanzhou and Chen, Xiang and Zhao, Jingke and Ju, Xiaolin and Wang, Gan "Can test input selection methods for deep neural network guarantee test diversity? A large-scale empirical study". Information and Software Technology (IST), 2022, 150: 106982.'
+---
+
+[Download paper here](http://ntu-juking.github.io/files/IST2022.pdf)
+
+[Source code](https://github.com/SwilderY/TIS-DNN)
+
+[Google Scholar](https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Can+test+input+selection+methods+for+deep+neural+network+guarantee+test+diversity%3F+A+large-scale+empirical+study&btnG=)
