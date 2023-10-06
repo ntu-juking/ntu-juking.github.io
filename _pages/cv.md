@@ -26,14 +26,14 @@ Work experience
 * 2020: Visiting Scholar
   * Purdue University
   * Supervisor: Professor Baijian Yang
+ 
+* 2016-2019: Postdoctoral fellow
+  * Nanjing University
+  * Supervisor: Baowen Xu
 
 * Spring 2012: Research Assistant
   * China Information Security Evaluation Center
 
-* 2016-2019: Postdoctoral fellow
-  * Nanjing University
-  * Supervisor: Baowen Xu
-    
 
 Publications
 ======
