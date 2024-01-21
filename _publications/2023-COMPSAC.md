@@ -4,11 +4,10 @@ collection: publications
 permalink: /publication/2023-COMPSAC
 date: 2023-03-01
 venue: 'the 47th IEEE  Annual Computers, Software, and Applications Conference (COMPSAC) —— CCF C'
-paperurl: 'http://ntu-juking.github.io/files/COMPSAC2023.pdf'
 citation: 'Hao Shen, Xiaolin Ju, Xiang Chen, and Guang Yang. "EDP-BGCNN: Effective Defect Prediction via BERT-based Graph Convolutional Neural Network". The 47th IEEE Annual Computers, Software, and Applications Conference (COMPSAC), Torino, Italy, June 26-30, 2023.'
 ---
 
-[Download paper here](http://ntu-juking.github.io/files/COMPSAC2023.pdf)
+[PDF](http://ntu-juking.github.io/files/COMPSAC2023.pdf)
 
 [Source code]()
 
