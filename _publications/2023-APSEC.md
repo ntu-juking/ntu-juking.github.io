@@ -10,4 +10,4 @@ citation: 'Guilong Lu, Xiaolin Ju, Xiang Chen, Shaoyu Yang, Liang Chen, and Hao 
 
 [Source code](https://github.com/syhstudy/AT_Empirical_Study)
 
-[Google Scholar](https://scholar.google.com/scholar?q=An+Empirical+Study+of+Adversarial+Training+in+Code+Comment+Generation.)
+[Google Scholar](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&as_ylo=2023&q=Assessing+the+Effectiveness+of+Vulnerability+Detection+via+Prompt+Tuning%3A+An+Empirical+Study&btnG=)
