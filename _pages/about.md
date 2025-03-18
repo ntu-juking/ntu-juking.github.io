@@ -13,7 +13,7 @@ Associate Professor, Master Supervisor
 
 Department of Software Engineering
 
-School of Information Science and Technology 
+School of Artificial Intelligence and Computer Science 
 
 Nantong University 
 
