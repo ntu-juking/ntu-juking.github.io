@@ -12,12 +12,12 @@ location: "Nantong, China"
 
 ===
 
-[Lec 01 概述]()
+[Lec 01 概述](http://ntu-juking.github.io/files/01-科学研究与写论好文.pptx)
 
-[Lec 02 论文的构成与基本表达]()
+[Lec 02 论文的构成与基本表达](http://ntu-juking.github.io/files/02-论文的构成与基本表达.pptx)
 
-[Lec 03 论文的写作方法与技巧]()
+[Lec 03 论文的写作方法与技巧](http://ntu-juking.github.io/files/03-写作方法和技巧.pptx)
 
-[Lec 04 论文的写作工具]()
+[Lec 04 论文的写作工具](http://ntu-juking.github.io/files/04-科研写作工具.pptx)
 
-[Lec 05 顶会顶刊论文选读]()
+[Lec 05 顶会顶刊论文选读](http://ntu-juking.github.io/files/05-顶会顶刊论文选读.pptx)
