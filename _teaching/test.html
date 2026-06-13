@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Engineering Quiz</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #222;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 720px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 25px;
+    }
+
+    .question-box {
+      margin-bottom: 20px;
+    }
+
+    .question-number {
+      font-size: 14px;
+      color: #2563eb;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .question {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: grid;
+      gap: 12px;
+    }
+
+    .option {
+      padding: 14px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      background: #f8fafc;
+      font-size: 16px;
+    }
+
+    .option:hover {
+      border-color: #3b82f6;
+      background: #eff6ff;
+      transform: translateY(-2px);
+    }
+
+    .option.correct {
+      background: #dcfce7;
+      border-color: #22c55e;
+      color: #166534;
+      font-weight: bold;
+    }
+
+    .option.wrong {
+      background: #fee2e2;
+      border-color: #ef4444;
+      color: #991b1b;
+      font-weight: bold;
+    }
+
+    .feedback {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 10px;
+      display: none;
+      line-height: 1.5;
+    }
+
+    .feedback.correct {
+      display: block;
+      background: #ecfdf5;
+      color: #065f46;
+      border-left: 5px solid #10b981;
+    }
+
+    .feedback.wrong {
+      display: block;
+      background: #fff1f2;
+      color: #9f1239;
+      border-left: 5px solid #f43f5e;
+    }
+
+    .buttons {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.25s;
+      font-weight: bold;
+    }
+
+    .next-btn {
+      background: #2563eb;
+      color: white;
+    }
+
+    .next-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .restart-btn {
+      background: #0f172a;
+      color: white;
+    }
+
+    .restart-btn:hover {
+      background: #334155;
+    }
+
+    .progress {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #2563eb, #06b6d4);
+      transition: width 0.3s ease;
+    }
+
+    .result {
+      text-align: center;
+      display: none;
+    }
+
+    .score {
+      font-size: 46px;
+      color: #2563eb;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .comment {
+      font-size: 18px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 20px;
+      }
+
+      .question {
+        font-size: 18px;
+      }
+
+      .option {
+        font-size: 15px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Software Engineering Quiz</h1>
+    <div class="subtitle">Answer the following multiple-choice questions.</div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="quizArea">
+      <div class="question-box">
+        <div class="question-number" id="questionNumber"></div>
+        <div class="question" id="questionText"></div>
+        <div class="options" id="optionsBox"></div>
+        <div class="feedback" id="feedbackBox"></div>
+      </div>
+
+      <div class="buttons">
+        <button class="restart-btn" onclick="restartQuiz()">Restart</button>
+        <button class="next-btn" id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+      </div>
+    </div>
+
+    <div class="result" id="resultArea">
+      <h2>Quiz Completed!</h2>
+      <div class="score" id="scoreText"></div>
+      <div class="comment" id="commentText"></div>
+      <br />
+      <button class="restart-btn" onclick="restartQuiz()">Try Again</button>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Which of the following best describes software requirements engineering?",
+        options: [
+          "Writing source code based on user interface designs",
+          "Identifying, analyzing, documenting, and validating user needs",
+          "Testing software after deployment",
+          "Managing hardware resources for software execution"
+        ],
+        answer: 1,
+        explanation: "Requirements engineering focuses on discovering, analyzing, specifying, and validating what stakeholders need from the software system."
+      },
+      {
+        question: "In software testing, what is the main purpose of unit testing?",
+        options: [
+          "To test the complete system in a production environment",
+          "To verify individual components or modules in isolation",
+          "To evaluate user satisfaction with the software",
+          "To measure the financial cost of software development"
+        ],
+        answer: 1,
+        explanation: "Unit testing checks whether individual functions, classes, or modules work correctly before they are integrated with other parts."
+      },
+      {
+        question: "Which software development model emphasizes iterative development and frequent customer feedback?",
+        options: [
+          "Waterfall Model",
+          "Agile Model",
+          "Big Bang Model",
+          "V-Model only"
+        ],
+        answer: 1,
+        explanation: "Agile development emphasizes short iterations, continuous feedback, customer collaboration, and adaptation to change."
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+
+    const questionNumber = document.getElementById("questionNumber");
+    const questionText = document.getElementById("questionText");
+    const optionsBox = document.getElementById("optionsBox");
+    const feedbackBox = document.getElementById("feedbackBox");
+    const nextBtn = document.getElementById("nextBtn");
+    const progressBar = document.getElementById("progressBar");
+    const quizArea = document.getElementById("quizArea");
+    const resultArea = document.getElementById("resultArea");
+    const scoreText = document.getElementById("scoreText");
+    const commentText = document.getElementById("commentText");
+
+    function loadQuestion() {
+      answered = false;
+      nextBtn.disabled = true;
+      feedbackBox.className = "feedback";
+      feedbackBox.innerHTML = "";
+
+      const q = questions[currentQuestion];
+
+      questionNumber.innerText = `Question ${currentQuestion + 1} of ${questions.length}`;
+      questionText.innerText = q.question;
+      optionsBox.innerHTML = "";
+
+      q.options.forEach((option, index) => {
+        const div = document.createElement("div");
+        div.className = "option";
+        div.innerText = `${String.fromCharCode(65 + index)}. ${option}`;
+        div.onclick = () => selectOption(index, div);
+        optionsBox.appendChild(div);
+      });
+
+      const progress = ((currentQuestion) / questions.length) * 100;
+      progressBar.style.width = progress + "%";
+
+      if (currentQuestion === questions.length - 1) {
+        nextBtn.innerText = "Finish";
+      } else {
+        nextBtn.innerText = "Next";
+      }
+    }
+
+    function selectOption(selectedIndex, selectedDiv) {
+      if (answered) return;
+
+      answered = true;
+      nextBtn.disabled = false;
+
+      const q = questions[currentQuestion];
+      const allOptions = document.querySelectorAll(".option");
+
+      allOptions.forEach((option, index) => {
+        option.style.pointerEvents = "none";
+
+        if (index === q.answer) {
+          option.classList.add("correct");
+        }
+
+        if (index === selectedIndex && index !== q.answer) {
+          option.classList.add("wrong");
+        }
+      });
+
+      if (selectedIndex === q.answer) {
+        score++;
+        feedbackBox.className = "feedback correct";
+        feedbackBox.innerHTML = `<strong>Correct!</strong><br>${q.explanation}`;
+      } else {
+        feedbackBox.className = "feedback wrong";
+        feedbackBox.innerHTML = `<strong>Incorrect.</strong><br>${q.explanation}`;
+      }
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      quizArea.style.display = "none";
+      resultArea.style.display = "block";
+      progressBar.style.width = "100%";
+
+      scoreText.innerText = `${score} / ${questions.length}`;
+
+      if (score === 3) {
+        commentText.innerText = "Excellent! You have a solid understanding of basic software engineering concepts.";
+      } else if (score === 2) {
+        commentText.innerText = "Good job! You understand most concepts, but there is still room for improvement.";
+      } else if (score === 1) {
+        commentText.innerText = "You got one correct. Please review the basic ideas of requirements, testing, and Agile development.";
+      } else {
+        commentText.innerText = "You may need to review the fundamentals of software engineering carefully.";
+      }
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      quizArea.style.display = "block";
+      resultArea.style.display = "none";
+      loadQuestion();
+    }
+
+    loadQuestion();
+  </script>
+
+</body>
+</html>
